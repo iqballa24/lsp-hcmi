@@ -1,0 +1,135 @@
+.contact {
+    &-section {
+        position: relative;
+        width: 100%;
+        max-width: 100vw;
+        height: 100vh;
+        background: $color-dark-black;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }   
+    
+    &-formBx {
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @include media-breakpoint-up(lg){
+            margin-top: 15rem;
+        }
+
+        form {
+            position: relative;
+            width: 100%;
+            padding: 0 0 0 7.5rem;
+
+            h1 {
+                color: #fff;
+                font-weight: $font-medium;
+                text-transform: uppercase;
+                letter-spacing: .2rem;
+                margin-bottom: 4rem;
+            }
+
+            .inputBox {
+                position: relative;
+                margin-bottom: 4rem;
+
+                &:last-child {
+                    margin-bottom: 0rem;
+                }
+
+                input, textarea {
+                    position: relative;
+                    background: transparent;
+                    outline: none;
+                    border: none;
+                    width: 100%;
+                    padding-bottom: 1rem;
+                    font-size: 1.6rem;
+                    letter-spacing: .1rem;
+                    font-weight: $font-light;
+                    border-bottom: .2rem solid rgba(255, 255, 255, 0.5);
+                    resize: none;
+
+                    &:focus ~ span, &:valid ~ span {
+                        transform: translateY(-2.4rem);
+                        color: $color-dark-red;
+                        font-size: 1.4rem;
+                    }
+
+                    &:focus, &:valid {
+                        border-bottom-color: #fff;
+                        color: #fff;
+                    }
+                }
+
+                textarea {
+                        height: 10rem;
+                }
+
+                span {
+                    position: absolute;
+                    left: 0;
+                    font-size: 1.6rem;
+                    font-weight: $font-light;
+                    display: inline-block;
+                    pointer-events: none;
+                    letter-spacing: .1rem;
+                    color: rgba(255, 255, 255, 0.5);
+                    transition: all 0.3s ease;
+                }
+            }
+        }
+    }
+
+    &-imgBx {
+        position: relative;
+        width: 50%;
+        height: 100%;
+        overflow: hidden;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: $color-white;
+            transform-origin: bottom;
+            transform: skewX(-25deg) translateX(40%);
+        }
+
+        img {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            max-height: 95%;
+        }
+    }
+
+    @media only screen and (max-width: 991px) {
+        &-section {
+            height: 140vh;
+        }
+
+        &-formBx {
+            width: 100%;
+            padding-top: 0 5rem;
+
+            form {
+                width: 100%;
+                max-width: 50rem;
+                padding: 3rem;
+            }
+        }     
+        
+        &-imgBx {
+            display: none;
+        }
+    }
+}
+

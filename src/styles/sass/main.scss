@@ -1,0 +1,30 @@
+// Abstracts
+@import './abstracts/mixins';
+@import './abstracts/variables';
+
+// Base
+@import './base/animate';
+@import './base/base';
+@import './base/normalize';
+
+// Components
+@import './components/buttons';
+@import './components/cards';
+@import './components/modals';
+
+// Layouts
+@import './layouts/preloader';
+@import './layouts/navbar';
+@import './layouts/carousel';
+
+// Pages
+@import './pages/homepage';
+@import './pages/about';
+@import './pages/skema';
+@import './pages/gallery';
+@import './pages/contact';
+
+// Layout 
+@import './layouts/footer';
+
+

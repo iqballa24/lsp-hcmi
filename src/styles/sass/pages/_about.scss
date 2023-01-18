@@ -1,0 +1,27 @@
+.service {
+    &-section {
+        margin-top: 15rem;
+        @include list;
+    }
+}
+
+.background {
+    &-section {
+        margin-top: 15rem;
+        @include list;
+    }
+}
+
+.visimisi {
+    &-section {
+        margin-top: 15rem;
+        @include list;
+    }
+}
+
+.structure {
+    &-section {
+        margin-top: 15rem;
+        margin-bottom: 15rem;
+    }
+}

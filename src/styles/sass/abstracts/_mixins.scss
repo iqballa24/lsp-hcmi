@@ -1,0 +1,96 @@
+@mixin wrapper {
+    width: 100%;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    margin-right: auto;
+    margin-left: auto;
+    transition: all 0.3s ease;
+
+    @include media-breakpoint-up(md) {
+        padding-left: 6rem;
+        padding-right: 6rem;
+    }
+
+    @include media-breakpoint-up(lg) {
+        padding-left: 10rem;
+        padding-right: 10rem;
+    }
+}
+
+@mixin list {
+    &-list {
+        list-style: none;
+        padding: 0;
+
+        .icon {
+            color: $color-orange;
+            font-size: 2rem;
+        }
+    }
+}
+
+@mixin media-breakpoint-up($breakpoint) {
+// Small devices (landscape phones, 576px and up)
+    @if $breakpoint == sm {
+        @media only screen and (min-width: 36em) {
+        @content;
+        }
+    }
+    // Medium devices (tablets, 768px and up)
+    @if $breakpoint == md {
+        @media only screen and (min-width: 48em) {
+        @content;
+        }
+    }
+    // Large devices (desktops, 992px and up)
+    @if $breakpoint == lg {
+        @media only screen and (min-width: 62em) {
+        @content;
+        }
+    }
+    // X-Large devices (large desktops, 1200px and up)
+    @if $breakpoint == xl {
+        @media only screen and (min-width: 75em) {
+        @content;
+        }
+    }
+    // XX-Large devices (larger desktops, 1400px and up)
+    @if $breakpoint == xxl {
+        @media only screen and (min-width: 87.5em) {
+        @content;
+        }
+    }
+}
+
+@mixin media-breakpoint-down($breakpoint) {
+// Small devices (landscape phones, 576px and up)
+    @if $breakpoint == sm {
+        @media only screen and (max-width: 36em) {
+        @content;
+        }
+    }
+    // Medium devices (tablets, 768px and up)
+    @if $breakpoint == md {
+        @media only screen and (max-width: 48em) {
+        @content;
+        }
+    }
+    // Large devices (desktops, 992px and up)
+    @if $breakpoint == lg {
+        @media only screen and (max-width: 62em) {
+        @content;
+        }
+    }
+    // X-Large devices (large desktops, 1200px and up)
+    @if $breakpoint == xl {
+        @media only screen and (max-width: 75em) {
+        @content;
+        }
+    }
+    // XX-Large devices (larger desktops, 1400px and up)
+    @if $breakpoint == xxl {
+        @media only screen and (max-width: 87.5em) {
+        @content;
+        }
+    }
+}

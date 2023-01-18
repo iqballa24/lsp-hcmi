@@ -1,0 +1,178 @@
+.nav {
+    &-container {
+        @include wrapper;
+        display: flex; 
+        position: fixed;
+        right: 0%;
+        width: 100vw;
+        z-index: 1;
+        padding-top: 4rem;
+        padding-bottom: 1.5rem;
+        flex-direction: column;
+
+        @include media-breakpoint-up(lg) {
+            height: auto;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+
+    &-logo {
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+
+        span {
+            font-weight: $font-medium;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.3rem;
+            padding-left: 1.5rem;
+            color: $color-white;
+
+            @include media-breakpoint-down(lg){
+                font-size: 2rem;
+            }
+        }
+
+        img {
+            width: 4rem;
+        }
+        
+    }
+
+    &-menus {
+        z-index: 1;
+        display: flex;
+        align-items: center ;
+        margin-top: auto;
+        margin-bottom: auto;
+        height: 100%;
+        top: 0;
+        transition: all 0.5s ease;
+        
+        //  small device
+        @include media-breakpoint-down(lg){
+            background: $color-dark-black;
+            list-style: none;
+            flex-direction: column;
+            padding-top: 6rem;
+            padding-left: 0;
+            margin: 0;
+            position: absolute;
+            right: -100%;
+            height: 100vh;
+            width: 100%;
+            max-width: 40rem;
+            box-shadow: 0px 0.8rem 4rem rgba(0, 0, 0, 0.08);
+            font-size: 1.8rem;
+        }
+
+        // Desktop
+        @include media-breakpoint-up(lg){     
+            justify-content: flex-end;
+            flex-direction: row;
+            flex-grow: 1;
+            height: auto;
+        }
+
+        &.show {
+            right: 0%;
+        }
+
+        li {
+            list-style: none;
+            margin-left: 3.2rem;
+
+            @include media-breakpoint-down(lg){
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .nav-item {
+                text-decoration: none;
+                color: $color-light-gray;
+                font-weight: $font-regular;
+                display: inline-block;
+                text-align: right;
+                padding: 1.6rem 6rem;
+                font-size: 1.4rem;
+
+                &:hover, &.active {
+                    color: $color-dark-red;
+                }
+
+                @include media-breakpoint-up(lg){
+                    width: auto;
+                    flex-basis: auto;
+                    padding: 0;
+                }
+            }
+
+            .button {
+                @include media-breakpoint-down(lg){
+                    margin-top: 2rem;
+                }
+            }
+        }
+
+        .btn-cancel {
+            color: $color-white;
+            position: absolute;
+            top: 3rem;
+            left: 3rem;
+            cursor: pointer;
+
+            @include media-breakpoint-up(lg){
+                display: none;
+            }
+        }
+    }
+
+    label{
+        display:flex;
+        flex-direction:column;
+        width: 3rem;
+        cursor: pointer;
+        transition: all 0.3s ease;
+
+        @media screen and (min-width: 320px) {
+            position: absolute;
+            top: 4.9rem;
+            right: 5vh;
+        }
+
+        @include media-breakpoint-up(lg){
+            display: none;
+        }
+
+        & span {
+            background: $color-dark-red;
+            border-radius:10px;
+            height: .2rem;
+            margin: .3rem 0;
+            transition: all 0.3s ease;
+
+            &:nth-of-type(1){
+                width:50%;    
+            }
+            
+            &:nth-of-type(2){
+                width:100%;
+            }
+            
+            &:nth-of-type(3){
+                width:75%;
+            }
+
+        }
+
+        input[type="checkbox"]{
+            display:none;
+        }
+    }
+}
+
+.disabledScroll {
+    overflow: hidden;
+}
+

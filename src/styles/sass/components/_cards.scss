@@ -1,0 +1,38 @@
+.card {
+    border-radius: .8rem !important;
+    padding: 2rem 2.1rem;
+    margin-bottom: 1rem;
+
+    // Card section peserta ujikom
+    &-peserta {
+        .icon {
+            align-items: center;
+            color: $color-light-gray2;
+        }
+
+        &:hover {
+            border: 0.8px solid $color-dark-red;
+        }
+    }
+
+    // Card law section 
+    &-law {
+        border: none !important;
+        transition: all 0.5s ease;
+        border-radius: .8rem;
+
+        @include media-breakpoint-down(lg){
+            margin-bottom: 3rem;
+        }
+
+        &:hover {
+            box-shadow: 0 0.5px 1px rgba(0,0,0,0.05), 
+            0 2px 4px rgba(0,0,0,0.05), 
+            0 4px 8px rgba(0,0,0,0.05), 
+            0 8px 16px rgba(0,0,0,0.05),
+            0 16px 32px rgba(0,0,0,0.05), 
+            0 32px 64px rgba(0,0,0,0.05);
+            
+        }
+    }
+}

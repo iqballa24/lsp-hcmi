@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,body {
+    font-size: 62.5%; //1rem = 10px
+    height: 100%;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+}
+
+h1 {
+    font-size: 2.8rem;
+    font-weight: $font-bold;
+}
+
+.h1-custom {
+    color: $color-dark-black;
+}
+
+p{
+    font-family: 'Poppins', sans-serif;
+    font-weight: $font-light;
+    color: $color-light-gray;
+    font-size: 1.6rem;
+}
+
+.fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+.scroll {
+    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+    background-color: $color-white;
+}
+
+::-webkit-scrollbar {
+    width: .8rem;
+}
+ 
+::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+ 
+body::-webkit-scrollbar-thumb {   /* color of the scroll thumb */
+    // border-radius: 2.5rem;       /* roundness of the scroll thumb */
+    border: 3px solid $color-dark-red;
+    background-color: $color-dark-red;
+}
+
+.text-link{
+    color: $color-dark-red;
+    text-decoration: none;
+}

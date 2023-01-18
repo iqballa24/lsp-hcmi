@@ -1,0 +1,96 @@
+.button {
+    text-decoration: none;
+    display: inline-block;
+    border: 0.5px solid $color-dark-red;
+    padding: 1rem 3.2rem;
+    border-radius: .4rem;
+    transition: 0.3s ease-in-out;
+    font-size: 1.4rem;
+    margin:0 0.3em 0.3em 0;
+    cursor: pointer;
+   
+    &-primary {
+        color: $color-white;
+        background-color: $color-dark-red;
+        box-shadow: 0 0 0 0.5px $color-dark-red;
+
+        &:hover {
+            letter-spacing: 0.1rem;
+            color: $color-dark-red;
+            background-color: transparent;
+        }
+    }
+
+    &-secondary {
+        color: $color-dark-red;
+        background-color: transparent;
+        box-shadow: 0 0 0 0.5px $color-dark-red;
+
+        &:hover {
+            letter-spacing: 0.1rem;
+            color: $color-white;
+            background-color: $color-dark-red;
+        }
+    }
+
+    &-skema {
+        color: $color-white;
+        background-color: transparent;
+        box-shadow: 0 0 0 0.5px $color-dark-red;
+        border: 0.5px solid $color-white;
+        width: 100%;
+        font-size: 1.6rem;
+
+        @include media-breakpoint-down(lg){
+            margin-bottom: 2rem;
+        }
+
+        &:hover {
+            letter-spacing: 0.1rem;
+            color: $color-dark-red;
+            font-weight: $font-bold;
+            background-color: $color-white;
+        }
+    }
+
+    &-pdf {
+        padding: 10px;
+        color: $color-dark-red;
+        border-bottom: solid 3px $color-dark-red;
+        border-radius: 5px;
+        cursor: pointer;
+
+        &:hover {
+            background-color: $color-dark-red;
+            color: #fff;
+            transition: all 0.5s ease-in-out;
+        }
+    }
+
+    &-float {
+        position: fixed;
+        width: 6rem;
+        height: 6rem;
+        right: 4rem;
+        background-color: #f33;
+        color: #fff;
+        border-radius: 5rem;
+        text-align: center;
+        box-shadow: 2px 2px 3px #999;
+        z-index: 1000;
+        transition: all 0.4s;
+        font-size: 3.6rem;
+        visibility: visible;
+        animation: bounce 2s infinite 2s;
+        
+        .my-float{
+            color: $color-white;
+            margin-top:10px;
+        }
+
+        &.show {
+            visibility: visible;
+        }
+    }
+
+}
