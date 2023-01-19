@@ -30,7 +30,8 @@ export type ContainerModalProps = {
   children: React.ReactNode;
 };
 
-export type ModalCalendarProps = {
-  toggleCalendar: () => void;
+export type ModalImageProps = {
+  altText: string;
+  toggleModal: () => void;
   image: string;
 };

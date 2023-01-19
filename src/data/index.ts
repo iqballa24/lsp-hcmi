@@ -24,10 +24,6 @@ const data = {
       id: 4,
       text: 'Adanya tuntutan wajib sertifikasi bagi pejabat yang akan menduduki jabatan bidang SDM sesuai SE Menaker Nomor : 5 tahun 2019 yang menyatakan wajib memiliki sertifikasi bidang SDM bagi karyawan yang menduduki jabatan bidang SDM dan berlaku efektif bulan Juli 2021.',
     },
-    {
-      id: 5,
-      text: 'LSP HCMI adalah LSP Pihak 3 yang akan melayani seluruh karyawan BUMN dan BUMD juga karyawan swasta atau siapa saja yang membutuhkan sertifikasi bidang SDM / Human Capital. ',
-    },
   ],
   telp: '021-2119-3636',
   email: 'admin@lsphcmi.com',

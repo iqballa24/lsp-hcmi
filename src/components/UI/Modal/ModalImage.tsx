@@ -1,21 +1,22 @@
 import React from 'react';
 import Container from '@/components/UI/Modal/Container';
 
-import { ModalCalendarProps } from '@/types';
+import { ModalImageProps } from '@/types';
 
-const ModalCalendar: React.FC<ModalCalendarProps> = ({
-  toggleCalendar,
-  image,
-}) => {
+const ModalImage: React.FC<ModalImageProps> = ({ altText, toggleModal, image }) => {
   return (
     <Container className="">
-      <span className="close cursor" onClick={toggleCalendar}>
+      <span
+        className="close cursor"
+        onClick={toggleModal}
+        aria-label={`close ${altText}`}
+      >
         &times;
       </span>
       <div className="modal-content">
         <img
           src={image}
-          alt="calendar"
+          alt={altText}
           style={{ width: 100 + '%' }}
           loading="lazy"
         />
@@ -24,4 +25,4 @@ const ModalCalendar: React.FC<ModalCalendarProps> = ({
   );
 };
 
-export default React.memo(ModalCalendar);
+export default React.memo(ModalImage);

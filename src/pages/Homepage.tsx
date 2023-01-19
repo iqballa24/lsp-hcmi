@@ -13,11 +13,11 @@ import {
 } from '@/components/Home';
 
 const Homepage = () => {
-  const refAbout = React.createRef();
+  const refContent = React.createRef();
 
   return (
     <React.Fragment>
-      <Hero mRef={refAbout} />
+      <Hero mRef={refContent} />
       <AboutSection />
       <SchemeSection />
       <PesertaSection />

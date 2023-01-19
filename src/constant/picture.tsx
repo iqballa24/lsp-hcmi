@@ -5,6 +5,10 @@ import Ujikom1Img from '@/assets/img/ujikom 16 1.jpg';
 import Ujikom2Img from '@/assets/img/ujikom 6 1.jpg';
 import Pelatihan2Img from '@/assets/img/pelatihan 4 1.jpg';
 import StructureLSP from '@/assets/img/struktur-organisasi 1.png';
+import ServiceLSP from "@/assets/img/vector/lsp-section.svg"
+import BackgroundLSP from "@/assets/img/vector/background-section.svg"
+import VisiMisiLSP from "@/assets/img/vector/vm-section.svg"
+import ContactLSP from "@/assets/img/vector/pana.svg"
 
 // IMAGE DOKUMENTASI
 import imgDokumentasi1 from '@/assets/img/dokumentasi/1.png';
@@ -33,6 +37,10 @@ export {
   Ujikom2Img,
   Pelatihan2Img,
   StructureLSP,
+  ServiceLSP,
+  BackgroundLSP,
+  VisiMisiLSP,
+  ContactLSP,
   imgDokumentasi1,
   imgDokumentasi2,
   imgDokumentasi3,

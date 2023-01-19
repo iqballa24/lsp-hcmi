@@ -7,6 +7,7 @@ const UiContextProvider: React.FC<{ children: React.ReactNode }> = ({
   const [showCalendar, setShowCalendar] = useState(false);
   const [showRegister, setShowRegister] = useState(false);
   const [showNav, setShowNav] = useState(false);
+  const [showStructure, setShowStructure] = useState(false);
 
   const toggleCalender = () => {
     setShowCalendar((prev) => !prev);
@@ -21,6 +22,10 @@ const UiContextProvider: React.FC<{ children: React.ReactNode }> = ({
     document.body.classList.toggle('disabledScroll');
   };
 
+  const toggleStructure = () => {
+    setShowStructure((prev) => !prev);
+  };
+
   const contextValue: ContextObj = {
     isShowCalendar: showCalendar,
     toggleCalendar: toggleCalender,
@@ -28,6 +33,8 @@ const UiContextProvider: React.FC<{ children: React.ReactNode }> = ({
     toggleRegister: toggleRegister,
     isShowNav: showNav,
     toggleNav: toggleNav,
+    isShowStructure: showStructure,
+    toggleStructure: toggleStructure,
   };
 
   return (

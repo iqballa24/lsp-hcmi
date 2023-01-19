@@ -34,7 +34,7 @@ const Header = () => {
               paddingTop: scrollYIsless10 ? '4rem' : '2rem',
             }}
           >
-            <a href="#" className="nav-logo">
+            <div className="nav-logo">
               <img
                 className="img-fluid logo"
                 src={Logo}
@@ -48,7 +48,7 @@ const Header = () => {
               >
                 LSP HCMI
               </span>
-            </a>
+            </div>
             <ul className={`nav-menus ${isShowNav ? 'show' : ''}`}>
               <li className="btn-cancel" onClick={toggleNav}>
                 <p>&#10006;</p>

@@ -5,9 +5,11 @@ export type ContextObj = {
   isShowCalendar: boolean;
   isShowRegister: boolean;
   isShowNav: boolean;
+  isShowStructure: boolean;
   toggleCalendar: () => void;
   toggleRegister: () => void;
   toggleNav: () => void;
+  toggleStructure: () => void;
 };
 
 const UiContext = React.createContext<ContextObj>({
@@ -17,6 +19,8 @@ const UiContext = React.createContext<ContextObj>({
   toggleRegister: () => {},
   isShowNav: false,
   toggleNav: () => {},
+  isShowStructure: false,
+  toggleStructure: () => {},
 });
 
 export default UiContext;

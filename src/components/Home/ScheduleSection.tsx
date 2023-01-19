@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
-import { Section, ModalCalendar } from '@/components/UI';
+import { Section, ModalImage } from '@/components/UI';
 
 import Calendar from '@/assets/img/calendar.jpg';
 import data from '@/data';
@@ -65,7 +65,11 @@ const ScheduleSection = () => {
         </Container>
       </Section>
       {isShowCalendar && (
-        <ModalCalendar toggleCalendar={toggleCalendar} image={Calendar} />
+        <ModalImage
+          altText="calendar"
+          toggleModal={toggleCalendar}
+          image={Calendar}
+        />
       )}
     </React.Fragment>
   );

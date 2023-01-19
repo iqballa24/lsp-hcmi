@@ -6,7 +6,7 @@ type HeroProps = {
 };
 
 const Hero: React.FC<HeroProps> = ({ mRef }) => {
-  function scrollToAboutSection() {
+  function skipToContent() {
     window.scrollTo({
       top: Number(mRef.current) + 600,
       behavior: 'smooth',
@@ -17,7 +17,7 @@ const Hero: React.FC<HeroProps> = ({ mRef }) => {
     <section className="carousel-section">
       <div className="carousel-text">
         <h1 tabIndex={0}>{data.longTitle}</h1>
-        <a href="#" className="scroll-down" onClick={scrollToAboutSection} aria-label="scroll down"></a>
+        <a href="#" className="scroll-down" onClick={skipToContent} aria-label="scroll down"></a>
       </div>
     </section>
   );
