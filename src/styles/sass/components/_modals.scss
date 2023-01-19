@@ -1,143 +1,146 @@
 .modal {
-    &-box {
-        display: block;
-        position: fixed;
-        z-index: 1;
-        padding-top: 100px;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        overflow: auto;
-        background-color: rgb(0,0,0); /* Fallback color */
-        background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  &-box {
+    display: block;
+    position: fixed;
+    z-index: 10;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0); /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
 
-        .modal-content {
-            position: relative;
-            z-index: 9999;
-            margin: auto;
-            padding: 0;
-            width: 90%;
-            max-width: 1200px;
-            animation-name: zoom;
-            animation-duration: 0.6s;
-        }
-
-        .cursor {
-            cursor: pointer;
-        }
-
-        /* The Close Button */
-        .close {
-            color: $color-dark-black;
-            position: absolute;
-            top: 10px;
-            right: 25px;
-            font-size: 35px;
-            font-weight: bold;
-
-            &:hover, &:focus {
-                color: $color-dark-red;
-                text-decoration: none;
-                cursor: pointer;
-            }
-        }
+    .modal-content {
+      position: relative;
+      z-index: 9999;
+      margin: auto;
+      padding: 0;
+      width: 90%;
+      max-width: 1200px;
+      animation-name: zoom;
+      animation-duration: 0.6s;
     }
 
-    &-daftar {
-        display: block;
-        position: fixed;
-        z-index: 1;
-        padding: 5rem;
-        width: 100%;
-        height: 100%;
-        overflow: auto;
-        top: 0;
-        left: 0;   
-        background-color: rgb(0,0,0); /* Fallback color */
-        background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-        animation-name: fadeIn;
-        animation-duration: 0.4s;
-
-        .modal-content {
-            max-width: 80rem;
-            background-color: #fefefe;
-            margin: auto;
-            padding: 5rem;
-            border-radius: .8rem;
-            width: 80%;
-            border: none;
-            animation-name: slideIn;
-            animation-duration: 0.4s;
-
-            @include media-breakpoint-down(sm){
-                width: 100%;
-                padding: 3rem;
-            }  
-
-            .pelatihan-section {
-                @include media-breakpoint-down(md){
-                    margin-top: 5rem;
-                }            
-            }
-
-            .cursor {
-                cursor: pointer;
-            }
-    
-            /* The Close Button */
-            .close {
-                color: $color-dark-black;
-                position: absolute;
-                top: 1rem;
-                right: 2.5rem;
-                font-size: 3.5rem;
-                font-weight: bold;
-    
-                &:hover, &:focus {
-                    color: $color-dark-red;
-                    text-decoration: none;
-                    cursor: pointer;
-                }
-
-                @include media-breakpoint-down(sm){
-                    font-size: 2.5rem;
-                    top: .5rem;
-                    right: 1rem;
-                }  
-            }
-        }
+    .cursor {
+      cursor: pointer;
     }
+
+    /* The Close Button */
+    .close {
+      display: flex;
+      justify-content: center;
+      color: $color-dark-black;
+      position: absolute;
+      top: 10px;
+      right: 25px;
+      font-size: 35px;
+      font-weight: bold;
+      min-height: 44px;
+      min-width: 44px;
+
+      &:hover,
+      &:focus {
+        color: $color-dark-red;
+        text-decoration: none;
+        cursor: pointer;
+      }
+    }
+  }
+
+  &-daftar {
+    display: block;
+    position: fixed;
+    z-index: 10;
+    padding: 5rem;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    top: 0;
+    left: 0;
+    background-color: rgb(0, 0, 0); /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+    animation-name: fadeIn;
+    animation-duration: 0.4s;
+
+    .modal-content {
+      max-width: 80rem;
+      background-color: #fefefe;
+      margin: auto;
+      padding: 5rem;
+      border-radius: 0.8rem;
+      width: 80%;
+      border: none;
+      animation-name: slideIn;
+      animation-duration: 0.4s;
+
+      @include media-breakpoint-down(sm) {
+        width: 100%;
+        padding: 3rem;
+      }
+
+      .pelatihan-section {
+        @include media-breakpoint-down(md) {
+          margin-top: 5rem;
+        }
+      }
+
+      .cursor {
+        cursor: pointer;
+      }
+
+      /* The Close Button */
+      .close {
+        color: $color-dark-black;
+        position: absolute;
+        top: 1rem;
+        right: 2.5rem;
+        font-size: 3.5rem;
+        font-weight: bold;
+
+        &:hover,
+        &:focus {
+          color: $color-dark-red;
+          text-decoration: none;
+          cursor: pointer;
+        }
+
+        @include media-breakpoint-down(sm) {
+          font-size: 2.5rem;
+          top: 0.5rem;
+          right: 1rem;
+        }
+      }
+    }
+  }
 }
 
 .notif {
-    &-info {
-        visibility: hidden;
-        min-width: 25rem;
-        left: 50%;
-        background-color: $color-light-gray3;
-        color: #fff;
-        text-align: center;
-        margin-left: -125px;
-        border-radius: .2rem;
-        padding: 1.4rem 4rem;
-        position: fixed;
-        z-index: 1;
-        bottom: 3rem;
-        font-size: 1.4rem;
-        font-family: 'Poppins', sans-serif;
-        font-weight: $font-light !important;
+  &-info {
+    visibility: hidden;
+    min-width: 25rem;
+    left: 50%;
+    background-color: $color-light-gray3;
+    color: #fff;
+    text-align: center;
+    margin-left: -125px;
+    border-radius: 0.2rem;
+    padding: 1.4rem 4rem;
+    position: fixed;
+    z-index: 1;
+    bottom: 3rem;
+    font-size: 1.4rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: $font-light !important;
 
-        @include media-breakpoint-down(sm){
-            padding: 1.4rem 2rem;
-        } 
-
-        &.show {
-            visibility: visible;
-            animation: jumpin 0.5s, jumpout 0.5s 2.5s;
-        }
+    @include media-breakpoint-down(sm) {
+      padding: 1.4rem 2rem;
     }
+
+    &.show {
+      visibility: visible;
+      animation: jumpin 0.5s, jumpout 0.5s 2.5s;
+    }
+  }
 }
-
-
-
