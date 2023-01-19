@@ -35,3 +35,27 @@ export type ModalImageProps = {
   toggleModal: () => void;
   image: string;
 };
+
+export type columnTypes = {
+  id: number;
+  title: string;
+};
+
+export type dataTableTypes = {
+  id: number;
+  kode: string;
+  title: string;
+};
+
+export type TableProps = {
+  column: columnTypes[];
+  data: dataTableTypes[];
+};
+
+export type schemeContainerProps = {
+  columnTable: columnTypes[];
+  dataTable: dataTableTypes[];
+  title: string;
+  desc: string;
+  filePdf: string;
+};

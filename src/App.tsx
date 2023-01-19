@@ -4,7 +4,8 @@ import Layouts from '@/components/layouts';
 import { Preloader } from '@/components/UI';
 
 const HomePage = React.lazy(() => import('@/pages/Homepage'));
-const AboutPage = React.lazy(() => import('@/pages/Aboutpage'))
+const AboutPage = React.lazy(() => import('@/pages/Aboutpage'));
+const SchemePage = React.lazy(() => import('@/pages/SchemePage'));
 
 function App() {
   return (
@@ -12,8 +13,9 @@ function App() {
       <Routes>
         <Route path="/" element={<Layouts />}>
           <Route index element={<HomePage />} />
-          <Route path='/about' element={<AboutPage />} />
-          <Route path='*' element={<AboutPage />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/scheme" element={<SchemePage />} />
+          <Route path="*" element={<AboutPage />} />
         </Route>
       </Routes>
     </Suspense>
