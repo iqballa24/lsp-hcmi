@@ -15,7 +15,7 @@ const StructureSection = () => {
         <Container>
           <Row>
             <Col lg={12} className="mb-5">
-              <h1>Struktur Organisasi</h1>
+              <h1 tabIndex={0}>Struktur Organisasi</h1>
             </Col>
             <Col>
               <img

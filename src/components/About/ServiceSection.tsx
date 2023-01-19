@@ -13,11 +13,11 @@ const ServiceSection = () => {
       <Container>
         <Row className="flex-column-reverse flex-lg-row">
           <Col lg={6} className="align-self-center">
-            <h1 className="h1-custom mb-5">{data.longTitle}</h1>
-            <p className="mb-5">{data.about.desc}</p>
+            <h1 className="h1-custom mb-5" tabIndex={0}>{data.longTitle}</h1>
+            <p className="mb-5" tabIndex={0}>{data.about.desc}</p>
             <ul className="service-section-list">
               {data.about.letters.map((letter) => (
-                <li key={letter.id}>
+                <li key={letter.id} tabIndex={0}>
                   <p>
                     <FontAwesomeIcon
                       icon={faCheckCircle}

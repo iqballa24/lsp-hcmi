@@ -16,12 +16,12 @@ const BackgroundSection = () => {
             <img className="fluid" src={BackgroundLSP} alt="service section" width={550} height="100%"/>
           </Col>
           <Col lg={6}>
-            <h1 className="h1-custom mb-5">
+            <h1 className="h1-custom mb-5" tabIndex={0}>
               Latar Belakang Pendirian LSP HCMI
             </h1>
             <ul className="background-section-list">
               {data.background.map((item) => (
-                <li key={item.id}>
+                <li key={item.id} tabIndex={0}>
                   <p>
                     <FontAwesomeIcon
                       icon={faCheckCircle}
@@ -32,7 +32,7 @@ const BackgroundSection = () => {
                 </li>
               ))}
             </ul>
-            <p>{data.about.desc}</p>
+            <p tabIndex={0}>{data.about.desc}</p>
           </Col>
         </Row>
       </Container>
