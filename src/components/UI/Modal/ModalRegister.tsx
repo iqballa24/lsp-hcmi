@@ -10,7 +10,7 @@ const ModalRegister: React.FC<{ toggleRegister: () => void }> = ({
   return (
     <Container className="" isRegister>
       <div className="modal-content">
-        <span className="close cursor" onClick={toggleRegister}>
+        <span className="close cursor" onClick={toggleRegister} aria-label="close register modal">
           &times;
         </span>
         <div className="row text-center">
