@@ -1,5 +1,5 @@
 # LSP HCMI
-Company profile of LSP HCMI
+Company profile of LSP HCMI (v1.1)
 
 ## Deploy
 * [vercel](https://lsphcmi-react.vercel.app/)
