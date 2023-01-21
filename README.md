@@ -2,7 +2,7 @@
 Company profile of LSP HCMI (v1.1)
 
 ## Deploy
-* [vercel](https://lsphcmi-react.vercel.app/)
+* [vercel](https://lsp-hcmi.vercel.app/)
 
 ## Screenshot
 ![image](https://user-images.githubusercontent.com/57162533/211011384-e26f01d7-308c-4c52-b06a-5091d258c80e.png)
