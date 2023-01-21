@@ -24,7 +24,7 @@ const ButtonToTop = () => {
   });
 
   return (
-    <Button className="" isFloat id="goto-top" ariaLabel="Name">
+    <Button className="" isFloat id="goto-top" ariaLabel="button-top">
       <FontAwesomeIcon
         icon={faCaretUp}
         className="my-float"

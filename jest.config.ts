@@ -16,5 +16,6 @@ module.exports = {
     '^@/lib(.*)$': '<rootDir>/src/lib/$1',
     '^@/constant(.*)$': '<rootDir>/src/constant/$1',
     '^@/assets(.*)$': '<rootDir>/src/assets/$1',
+    '^@/utils(.*)$': '<rootDir>/src/utils/$1',
   },
 };
